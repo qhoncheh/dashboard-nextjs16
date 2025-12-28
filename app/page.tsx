@@ -1,5 +1,5 @@
 import Dashboard from "./components/Dashboard/dashboard";
-import Sidebar from "./components/Sidebar/sidebar";
+import { Sidebar } from "./components/Sidebar/sidebar";
 
 export default function Home() {
   return (

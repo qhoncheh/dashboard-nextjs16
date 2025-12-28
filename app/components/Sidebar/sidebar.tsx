@@ -1,16 +1,18 @@
-import AccountToggle from "./account-toggle"
+import AccountToggle from "./components/account-toggle";
+import { Plan } from "./components/plan";
+import { RouteSelect } from "./components/rout-select";
+import Search from "./components/search";
 
-const Sidebar = () => {
+export const Sidebar = () => {
   return (
-    <div className="bg-gray-100  h-full">
-        <div className="overflow-y-scroll top-4 h-[calc(100vh-32px-48px)] sticky ">
-            <AccountToggle />
-        </div>
-        <div>
+    <div>
+      <div className="overflow-y-scroll sticky top-4 h-[calc(100vh-32px-48px)]">
+        <AccountToggle />
+        <Search />
+        <RouteSelect />
+      </div>
 
-        </div>
+      <Plan />
     </div>
-  )
-}
-
-export default Sidebar
+  );
+};
