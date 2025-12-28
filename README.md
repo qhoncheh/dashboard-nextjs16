@@ -17,7 +17,7 @@ https://ghonche-ataei-dashboard-nextjs16.vercel.app/
 
 Next.js 16
 
-React
+TypeScript
 
 Tailwindcss 5
 
