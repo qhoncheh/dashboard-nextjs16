@@ -1,4 +1,7 @@
 import { ActivityGraph } from "./activity-graph";
+import { RecentTransactions } from "./recent-transations";
+import { StatCards } from "./stadt-card";
+import { UsageRadar } from "./usage";
 
 
 export const Grid = () => {

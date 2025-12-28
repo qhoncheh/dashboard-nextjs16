@@ -1,3 +1,5 @@
+import { Grid } from "./components/grid";
+import { TopBar } from "./components/top-bar";
 
 export const Dashboard = () => {
   return (

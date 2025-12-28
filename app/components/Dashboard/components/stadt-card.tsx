@@ -1,114 +1,66 @@
-import React from "react";
-import { FiArrowUpRight, FiDollarSign, FiMoreHorizontal } from "react-icons/fi";
+import { FiTrendingDown, FiTrendingUp } from "react-icons/fi";
 
-export const RecentTransactions = () => {
+export const StatCards = () => {
   return (
-    <div className="col-span-12 p-4 rounded border border-stone-300">
-      <div className="mb-4 flex items-center justify-between">
-        <h3 className="flex items-center gap-1.5 font-medium">
-          <FiDollarSign /> Recent Transactions
-        </h3>
-        <button className="text-sm text-violet-500 hover:underline">
-          See all
-        </button>
-      </div>
-      <table className="w-full table-auto">
-        <TableHead />
-
-        <tbody>
-          <TableRow
-            cusId="#48149"
-            sku="Pro 1 Month"
-            date="Aug 2nd"
-            price="$9.75"
-            order={1}
-          />
-          <TableRow
-            cusId="#1942s"
-            sku="Pro 3 Month"
-            date="Aug 2nd"
-            price="$21.25"
-            order={2}
-          />
-          <TableRow
-            cusId="#4192"
-            sku="Pro 1 Year"
-            date="Aug 1st"
-            price="$94.75"
-            order={3}
-          />
-          <TableRow
-            cusId="#99481"
-            sku="Pro 1 Month"
-            date="Aug 1st"
-            price="$9.44"
-            order={4}
-          />
-          <TableRow
-            cusId="#1304"
-            sku="Pro 1 Month"
-            date="Aug 1st"
-            price="$9.23"
-            order={5}
-          />
-          <TableRow
-            cusId="#1304"
-            sku="Pro 3 Month"
-            date="Jul 31st"
-            price="$22.02"
-            order={6}
-          />
-        </tbody>
-      </table>
-    </div>
+    <>
+      <Card
+        title="Gross Revenue"
+        value="$120,054.24"
+        pillText="2.75%"
+        trend="up"
+        period="From Jan 1st - Jul 31st"
+      />
+      <Card
+        title="Avg Order"
+        value="$27.97"
+        pillText="1.01%"
+        trend="down"
+        period="From Jan 1st - Jul 31st"
+      />
+      <Card
+        title="Trailing Year"
+        value="$278,054.24"
+        pillText="60.75%"
+        trend="up"
+        period="Previous 365 days"
+      />
+    </>
   );
 };
 
-const TableHead = () => {
-  return (
-    <thead>
-      <tr className="text-sm font-normal text-stone-500">
-        <th className="text-start p-1.5">Customer ID</th>
-        <th className="text-start p-1.5">SKU</th>
-        <th className="text-start p-1.5">Date</th>
-        <th className="text-start p-1.5">Price</th>
-        <th className="w-8"></th>
-      </tr>
-    </thead>
-  );
-};
-
-const TableRow = ({
-  cusId,
-  sku,
-  date,
-  price,
-  order,
+const Card = ({
+  title,
+  value,
+  pillText,
+  trend,
+  period,
 }: {
-  cusId: string;
-  sku: string;
-  date: string;
-  price: string;
-  order: number;
+  title: string;
+  value: string;
+  pillText: string;
+  trend: "up" | "down";
+  period: string;
 }) => {
   return (
-    <tr className={order % 2 ? "bg-stone-100 text-sm" : "text-sm"}>
-      <td className="p-1.5">
-        <a
-          href="#"
-          className="text-violet-600 underline flex items-center gap-1"
+    <div className="col-span-4 p-4 rounded border border-stone-300">
+      <div className="flex mb-8 items-start justify-between">
+        <div>
+          <h3 className="text-stone-500 mb-2 text-sm">{title}</h3>
+          <p className="text-3xl font-semibold">{value}</p>
+        </div>
+
+        <span
+          className={`text-xs flex items-center gap-1 font-medium px-2 py-1 rounded ${
+            trend === "up"
+              ? "bg-green-100 text-green-700"
+              : "bg-red-100 text-red-700"
+          }`}
         >
-          {cusId} <FiArrowUpRight />
-        </a>
-      </td>
-      <td className="p-1.5">{sku}</td>
-      <td className="p-1.5">{date}</td>
-      <td className="p-1.5">{price}</td>
-      <td className="w-8">
-        <button className="hover:bg-stone-200 transition-colors grid place-content-center rounded text-sm size-8">
-          <FiMoreHorizontal />
-        </button>
-      </td>
-    </tr>
+          {trend === "up" ? <FiTrendingUp /> : <FiTrendingDown />} {pillText}
+        </span>
+      </div>
+
+      <p className="text-xs text-stone-500">{period}</p>
+    </div>
   );
 };
