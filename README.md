@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 معرفی
 
-## Getting Started
+این پروژه یک داشبورد تعاملی وب ساخته شده با Next.js 16 است که هدف آن نمایش و مدیریت داده‌ها با رابط کاربری ساده و مدرن می‌باشد.
 
-First, run the development server:
+🔗 نسخه‌ی آنلاین:
+https://ghonche-ataei-dashboard-nextjs16.vercel.app/
 
-```bash
+✨ قابلیت‌ها
+
+✔️ طراحی واکنش‌گرا (Responsive)
+✔️ ناوبری ساده و بهینه
+✔️ نمایش نمودارها / جداول داده
+✔️ استفاده از بهترین روش‌های Next.js
+✔️ به‌روزرسانی سریع با Vercel
+
+🛠️ تکنولوژی‌های استفاده‌شده
+
+Next.js 16
+
+React
+
+CSS/SCSS یا Tailwind (در صورت استفاده)
+
+هر کتابخانه نمایش داده (مثل Chart.js, Recharts و …)
+
+Vercel برای استقرار
+
+📦 نحوه اجرای پروژه
+
+مخزن را clone کنید:
+
+git clone https://github.com/your-username/repo-name.git
+cd repo-name
+
+
+وابستگی‌ها را نصب کنید:
+
+npm install
+# یا
+yarn
+
+
+پروژه را اجرا کنید:
+
 npm run dev
-# or
+# یا
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+مرورگر را باز کنید و به لینک زیر بروید:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+⚙️ پیکربندی (در صورت نیاز)
 
-To learn more about Next.js, take a look at the following resources:
+اگر پروژه از متغیرهای محیطی (.env) استفاده می‌کند:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_API_URL=...
+ANOTHER_SECRET=...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📌 ساخت و انتشار
 
-## Deploy on Vercel
+برای ساخت Production:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm run build
+# یا
+yarn build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+برای اجرای نسخه‌ی ساخته‌شده:
+
+npm start
+# یا
+yarn start
+
+🧑‍💻 ساختار پروژه
+📦 app
+├─ components/
+├─ pages/ (در صورت استفاده)
+├─ public/
+├─ styles/
+├─ ...
+
+🤝 مشارکت
+
+اگر پیشنهادی داری یا می‌خوای مشارکت کنی:
+
+Fork کن
+
+branch جدید بساز (feature/awesome)
+
+Commit کن
+
+Push کن
+
+Pull Request بده
+
+📜 مجوز (License)
+
+این پروژه تحت مجوز MIT است — برای جزئیات بیشتر به فایل LICENSE مراجعه کنید.
+
+❤️ تشکر
+
+از اینکه این پروژه رو دیدی خیلی ممنون!
+اگر دوست داری ⭐️ بده 🌟
