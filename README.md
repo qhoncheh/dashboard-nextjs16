@@ -19,7 +19,7 @@ Next.js 16
 
 React
 
-CSS/SCSS یا Tailwind (در صورت استفاده)
+Tailwindcss 5
 
 هر کتابخانه نمایش داده (مثل Chart.js, Recharts و …)
 
