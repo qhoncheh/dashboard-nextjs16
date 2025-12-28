@@ -21,7 +21,8 @@ TypeScript
 
 Tailwindcss 5
 
-هر کتابخانه نمایش داده (مثل Chart.js, Recharts و …)
+Recharts
+
 
 Vercel برای استقرار
 
