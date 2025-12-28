@@ -10,7 +10,7 @@ import {
 
 export const RouteSelect = () => {
   return (
-    <div className="space-y-1">
+    <div className="space-y-1 p-2">
       <Route Icon={FiHome} selected={true} title="Dashboard" />
       <Route Icon={FiUsers} selected={false} title="Team" />
       <Route Icon={FiPaperclip} selected={false} title="Invoices" />
