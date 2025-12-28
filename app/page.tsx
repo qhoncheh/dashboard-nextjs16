@@ -1,18 +1,15 @@
-import Image from "next/image";
+import Dashboard from "./components/Dashboard/dashboard";
+import Sidebar from "./components/Sidebar/sidebar";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-      </main>
-    </div>
+    <main className="grid grid-cols-[250px_1fr] h-screen overflow-hidden bg-gray-100">
+      <div className="h-full pt-4 pb-4 pl-4">
+         <Sidebar />
+       </div>
+      <div className="p-5">
+        <Dashboard />
+      </div>
+    </main>
   );
 }
